@@ -1,3 +1,4 @@
 .cursorindexingignore
 .langchain/
 .specstory/
+.venv_langchain/

@@ -5,7 +5,10 @@ from langchain_community.document_loaders import DirectoryLoader
     pip install python-magic
 """
 # loader = DirectoryLoader("../data/黑悟空", glob="**/*.txt")
-loader = DirectoryLoader("../data/黑悟空")
+# loader = DirectoryLoader("../data/黑悟空")
+# loader = DirectoryLoader("../data/黑悟空", glob="**/黑悟空英文.jpg")
+# loader = DirectoryLoader("../data/黑悟空", glob="**/黑悟空销量.jpg")
+loader = DirectoryLoader("../data/黑悟空", glob="**/*.md")
 docs = loader.load()
 for doc in docs:
     print(doc.metadata)
