@@ -2,3 +2,5 @@
 .langchain/
 .specstory/
 .venv_langchain/
+.venv_llamaindex/
+.venv_unstructed/
