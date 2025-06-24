@@ -4,3 +4,4 @@
 .venv_langchain/
 .venv_llamaindex/
 .venv_unstructed/
+__pycache__/

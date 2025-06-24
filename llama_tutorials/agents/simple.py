@@ -1,9 +1,11 @@
 from llama_index.llms.openai import OpenAI
+from llama_index.llms.ollama import Ollama
 from llama_index.core.agent.workflow import FunctionAgent
 import asyncio
 
 
 llm = OpenAI(model="gpt-4o-mini")
+# llm = Ollama(model="deepseek-r1:1.5b")
 
 
 def add(a: int, b: int) -> int:
@@ -33,7 +35,7 @@ def divide(a: int, b: int) -> int:
 agent = FunctionAgent(
     llm=llm,
     tools=[add, subtract, multiply, divide],
-    prompt="你是一个计算器，请根据用户输入的计算公式，计算出结果")
+    prompt="你是一个Agent，请根据用户输入问题决定使用哪个工具完成数值计算。")
 
 
 async def run(q: str):
